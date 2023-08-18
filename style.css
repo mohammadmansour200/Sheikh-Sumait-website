@@ -1,0 +1,267 @@
+@import url(https://db.onlinewebfonts.com/c/314d71ddbb9f0768c5f219a7cd0abd42?family=Lotus+Linotype+Bold);
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap");
+
+* {
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-body: "Lotus Linotype Bold";
+  --ff-maintitle: "Noto Nastaliq Urdu";
+
+  --clr-foreground: white;
+  --clr-1background: #100f15;
+  --clr-2background: #24232b;
+
+  --nav-clr: grey;
+}
+
+.dark-theme {
+  --clr-foreground: white;
+  --clr-1background: #100f15;
+  --clr-2background: #24232b;
+  --nav-clr: #1c1b24;
+}
+
+.light-theme {
+  --clr-foreground: black;
+  --clr-1background: rgb(55, 56, 78);
+  --clr-2background: white;
+  --nav-clr: #e7e4e4;
+}
+
+body {
+  text-align: center;
+  color: var(--clr-foreground);
+  background-color: var(--clr-1background);
+  font-size: 1.5rem;
+  font-family: var(--ff-body);
+}
+
+main {
+  text-align: center;
+  position: relative;
+  margin: 9px;
+  border-radius: 3px;
+  background-color: var(--clr-2background);
+  overflow: hidden;
+}
+
+/*Theme toggle*/
+#theme-toggle {
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: 50%;
+  padding: 0.3rem;
+  transition: 1000ms;
+  z-index: 2;
+}
+
+/*Theme toggle coloring*/
+#theme-toggle svg {
+  fill: var(--clr-foreground);
+}
+
+#theme-toggle:hover,
+#theme-toggle:active {
+  opacity: 1;
+  background: hsl(0 0% 50% / 0.15);
+}
+
+/*Theme toggle alignment*/
+button {
+  position: absolute;
+  top: 2%;
+  left: 4%;
+}
+
+/*toggle-circle translation animation*/
+.toggle-circle {
+  transition: transform 300ms ease-out;
+}
+.light-theme .toggle-circle {
+  transform: translateX(-15%);
+}
+
+/*toggle-sun rotation animation*/
+.toggle-sun {
+  transform-origin: center center;
+  transition: transform 750ms cubic-bezier(0.11, 0.14, 0.29, 1.32);
+}
+.light-theme .toggle-sun {
+  transform: rotate(0.5turn);
+}
+/*Theme-toggle end*/
+
+/*Back to top button*/
+#backtotop {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: -28px -20px 0 0;
+  visibility: hidden;
+  right: 87%;
+  bottom: -90%;
+  z-index: 2;
+  position: fixed;
+}
+/*Back to top button coloring*/
+#backtotop svg {
+  fill: var(--clr-foreground);
+}
+/*Back to top button end*/
+
+/*Main title*/
+h1 {
+  font-family: var(--ff-maintitle);
+  padding: 1rem;
+}
+
+/*Sheik-Sumait's image & image caption*/
+figure {
+  margin: 0.5rem;
+  padding-top: 0;
+}
+
+img {
+  max-width: 102%;
+  height: auto;
+  object-fit: contain;
+  margin-left: -10rem;
+  margin-right: -10rem;
+  padding-bottom: 2%;
+}
+
+#img-caption {
+  position: relative;
+  bottom: 25px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+/*Sheik-Sumait's image & image caption end*/
+
+/*Subtitle*/
+h2 {
+  font-size: 3rem;
+}
+
+/*Changing رحمه الله font*/
+span {
+  font-family: var(--ff-maintitle);
+  word-spacing: 0.1px;
+  font-size: 2rem;
+}
+
+/*Table of contents*/
+nav {
+  margin-top: 1rem;
+  padding: 1rem 3rem 2rem 2rem;
+  background-color: var(--nav-clr);
+  border-radius: 6px;
+  margin-bottom: 4rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+#navol {
+  list-style: arabic-indic;
+}
+
+/*Link styling*/
+a:link,
+a:visited {
+  color: #5d8be1;
+  text-underline-offset: 8px;
+}
+/*Table of contents end*/
+
+/*Section heading*/
+h3 {
+  text-align: right;
+  padding-right: 20px;
+  margin-top: 3rem;
+  font-size: 2.3rem;
+}
+
+ul,
+#book,
+p {
+  padding-right: 2.5rem;
+  padding-left: 2rem;
+}
+
+li {
+  text-align: right;
+}
+
+#book {
+  margin-top: 4rem;
+}
+
+iframe {
+  margin-top: 2rem;
+  width: 70%;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+/*Github icon*/
+a {
+  fill: white;
+  margin-top: 1.5rem;
+}
+
+/*Large desktops and laptops*/
+@media (max-width: 1450px) {
+  #theme-toggle {
+    top: 0.25%;
+    left: 0.7%;
+  }
+}
+
+/*Desktops and laptops*/
+@media (max-width: 1030px) {
+  #theme-toggle {
+    top: 0.3%;
+    left: 1%;
+  }
+}
+
+/*Tablet*/
+@media (max-width: 770px) {
+  img {
+    max-width: 130%;
+  }
+  #theme-toggle {
+    top: 0.2%;
+    left: 1%;
+  }
+}
+
+/*Large mobiles*/
+@media (max-width: 430px) {
+  img {
+    max-width: 160%;
+  }
+  #theme-toggle {
+    top: 0.1%;
+    left: 2%;
+  }
+}
+/*Medium & small mobiles*/
+@media (max-width: 380px) {
+  img {
+    max-width: 170%;
+  }
+  #pdf {
+    width: 60%;
+  }
+}
