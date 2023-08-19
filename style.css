@@ -110,6 +110,7 @@ button {
   bottom: -90%;
   z-index: 2;
   position: fixed;
+  transform: translate3d(0, 0, 0);
 }
 /*Back to top button coloring*/
 #backtotop svg {
