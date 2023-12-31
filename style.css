@@ -35,11 +35,13 @@
 }
 
 body {
+  -webkit-tap-highlight-color: transparent;
   text-align: center;
   color: var(--clr-foreground);
   background-color: var(--clr-1background);
   font-size: 1.5rem;
   font-family: var(--ff-body);
+  scroll-behavior: smooth;
 }
 
 main {
@@ -131,9 +133,7 @@ figure {
 }
 
 img {
-  max-width: 102%;
-  height: auto;
-  object-fit: contain;
+  min-width: 100%;
   margin-left: -10rem;
   margin-right: -10rem;
   padding-bottom: 2%;
@@ -203,6 +203,8 @@ li {
 
 #book {
   margin-top: 4rem;
+  margin-bottom: 0;
+  font-size: 2rem;
 }
 
 iframe {

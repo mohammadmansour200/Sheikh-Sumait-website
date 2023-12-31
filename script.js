@@ -23,7 +23,7 @@ themeToggle.addEventListener("click", () => {
     : enableLightMode();
 });
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   if (window.scrollY > 600) {
     backtotop.style.visibility = "visible";
     backtotop.style.transform = "translateY(1%)";
