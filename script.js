@@ -27,14 +27,10 @@ window.addEventListener("scroll", () => {
 	if (window.scrollY > 600) {
 		backtotop.style.opacity = "100";
 		backtotop.style.visibility = "visible";
-		backtotop.style.transform = "translateY(1%)";
-		backtotop.style.transition =
-			"transform 500ms cubic-bezier(0.11, 0.14, 0.29, 1.32)";
+		backtotop.style.transform = "translateY(0%)";
 	} else {
 		backtotop.style.opacity = "0";
 		backtotop.style.transform = "translateY(8%)";
 		backtotop.style.visibility = "hidden";
-		backtotop.style.transition =
-			"all 500ms cubic-bezier(0.11, 0.14, 0.29, 1.32)";
 	}
 });

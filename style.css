@@ -5,12 +5,12 @@
   src: url(assets/Noto-Nastaliq.woff2) format('woff2');
 }
 
-@font-face{
+@font-face {
   font-family: "Lotus Linotype Bold";
   src: url("assets/Lotus-Linotype.woff2")format("woff2");
-  font-weight:normal;
-  font-style:normal;
-  font-display:swap;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -118,14 +118,17 @@ main {
   transform-origin: center center;
   transition: transform 750ms cubic-bezier(0.11, 0.14, 0.29, 1.32);
 }
+
 .light-theme .toggle-sun {
   transform: rotate(0.5turn);
 }
+
 /*Theme-toggle end*/
 
 /*Back to top button*/
 #backtotop {
   position: fixed;
+  opacity: 0;
   left: 12px;
   background-color: var(--clr-2background);
   bottom: 12px;
@@ -133,12 +136,15 @@ main {
   padding: 12px;
   border-radius: 12px;
   border: 1px solid #403f36ff;
+  transition: 500ms cubic-bezier(0.11, 0.14, 0.29, 1.32)
 }
+
 /*Back to top button coloring*/
 #backtotop svg {
   transform: rotate(180deg);
   stroke: var(--clr-foreground);
 }
+
 /*Back to top button end*/
 
 /*Main title*/
@@ -166,6 +172,7 @@ img {
   padding-left: 1%;
   padding-right: 1%;
 }
+
 /*Sheik-Sumait's image & image caption end*/
 
 /*Subtitle*/
@@ -201,6 +208,7 @@ a:visited {
   color: #5d8be1;
   text-underline-offset: 8px;
 }
+
 /*Table of contents end*/
 
 /*Section heading*/
@@ -258,11 +266,13 @@ a {
     max-width: 160%;
   }
 }
+
 /*Medium & small mobiles*/
 @media (max-width: 380px) {
   img {
     max-width: 170%;
   }
+
   #pdf {
     width: 60%;
   }
